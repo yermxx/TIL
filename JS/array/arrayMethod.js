@@ -100,3 +100,16 @@ console.log(arr12);  // [1, 1, 3, 4, 5]
 let arr13 = [1, 2, 3];
 arr13.reverse();
 console.log(arr13); // [3, 2, 1]
+
+
+// etc.
+// forEach(): 각 요소에 대해 주어진 콜백 함수를 실행하는 메서드. 
+// 반환 값이 없으며 요소/인덱스/배열 자체를 인자로 받을 수 있음.
+fruits.forEach(function(value, index, array) {
+  console.log('-----------------');
+  console.log(value);
+  console.log(index);
+  console.log(array);
+});
+// 화살표 함수 사용 가능
+fruits.forEach((value) => console.log(value));
