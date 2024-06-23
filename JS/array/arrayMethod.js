@@ -23,8 +23,21 @@ console.log(arr4); // [0, 1, 2, 3]
 
 // splice(): 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경
 let arr5 = [1, 2, 3, 4, 5];
-arr5.splice(2, 1, 'a', 'b');
+
+arr5.splice(2, 1);
+console.log(arr5); // [1, 2, 4, 5]
+
+arr5.splice(2, 0, 'a', 'b'); // 인덱스 2에서 0개의 요소를 제거하고, 'a', 'b'를 추가
+console.log(arr5); // [1, 2, 'a', 'b', 3, 4, 5]
+
+arr5.splice(2, 1, 'a', 'b'); // 인덱스 2에서 1개의 요소를 제거하고, 'a', 'b'를 추가
 console.log(arr5); // [1, 2, 'a', 'b', 4, 5]
+
+arr5.splice(2, 2, 'a', 'b'); // 인덱스 2에서 2개의 요소를 제거하고, 'a', 'b'를 추가
+console.log(arr5); // [1, 2, 'a', 'b', 5]
+
+arr5.splice(-2, 1); // 배열 끝에서 두 번째 요소를 제거
+console.log(arr5); // [1, 2, 3, 5]
 
 // some(): 배열의 아이템들이 부분적으로 조건(콜백함수)에 맞는지 확인
 const item1 = { name: '🥛', price: 2 };
@@ -105,6 +118,8 @@ console.log(arr13); // [3, 2, 1]
 // etc.
 // forEach(): 각 요소에 대해 주어진 콜백 함수를 실행하는 메서드. 
 // 반환 값이 없으며 요소/인덱스/배열 자체를 인자로 받을 수 있음.
+const fruits = ['🥝', '🍓', '🍎', '🍇'];
+
 fruits.forEach(function(value, index, array) {
   console.log('-----------------');
   console.log(value);
